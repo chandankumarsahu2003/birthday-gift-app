@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎂 Happy Birthday Debanshi 🎉</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffe6f0, #e6ccff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-card {
+            background-color: white;
+            padding: 50px 60px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            width: 95%;
+            max-width: 600px;
+        }
+
+        .form-card h1 {
+            color: #cc3399;
+            margin-bottom: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 28px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            padding: 14px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            background-color: #ff66b3;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e60073;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 16px;
+            color: #888;
+        }
+
+        /* 🎈 Simple balloons for touch */
+        .balloon {
+            position: fixed;
+            bottom: -100px;
+            width: 30px;
+            height: 45px;
+            background: radial-gradient(circle, #ff99cc 0%, #ff66b3 100%);
+            border-radius: 50%;
+            animation: floatUp linear;
+            opacity: 0.5;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h1>🎂 Happy Birthday Debanshi 🎉</h1>
+        <form action="SaveData" method="post">
+            <input type="text" name="name" placeholder="Your Name"><br>
+            <input type="text" name="village" placeholder="Your Village"><br>
+            <input type="text" name="payment" placeholder="Gift Amount ₹"><br>
+            <input type="submit" value="Submit 🎁">
+        </form>
+        <div class="footer">
+            With 💖 from Chandan Kumar
+        </div>
+    </div>
+
+    <!-- 🎈 Floating balloons -->
+    <script>
+        function createBalloon() {
+            const balloon = document.createElement("div");
+            balloon.className = "balloon";
+            balloon.style.left = Math.random() * 100 + "vw";
+            balloon.style.animationDuration = (Math.random() * 4 + 6) + "s";
+            document.body.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
